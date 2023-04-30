@@ -1,0 +1,44 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  SERVER: 172.16.1.9
+  DEPLOY_FOLDER: /home/mkiit/nginx/frontend
+  USERNAME: mkiit
+
+build:
+  extends: .yarn-build
+  stage: build
+
+deploy:
+  extends: .delivery
+  stage: deploy
+  only:
+    - main
+
+.yarn-build:
+  image: node:18-alpine3.16
+  script:
+    - corepack enable
+    - yarn install --frozen-lockfile
+    - yarn build
+  artifacts:
+    paths:
+      - dist
+
+.delivery:
+  extends: .auth
+  image: alpine:3.15
+  script:
+    - rsync -apruz dist/ ${USERNAME}@${SERVER}:${DEPLOY_FOLDER}
+
+.auth:
+  image: alpine:3.15
+  before_script:
+    - apk add --update openssh-client bash rsync gettext
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - echo -e "StrictHostKeyChecking no" >> /etc/ssh/ssh_config
+    - chmod 600 $SSH_DEPLOY_KEY
+    - ssh-add $SSH_DEPLOY_KEY

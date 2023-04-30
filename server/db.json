@@ -1,0 +1,65 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "insideNumber": 1,
+      "type": "docs",
+      "name": "Docs",
+      "number": 230,
+      "legalDate": "01.02.2022",
+      "date": "01.02.2022, 14:22",
+      "modificationDate": "01.02.2022, 14:22",
+      "documentScan": "скан документ",
+      "wayToFile": "путь к документу"
+    },
+    {
+      "id": 2,
+      "insideNumber": 2,
+      "type": "pdf",
+      "name": "Pdf",
+      "number": 231,
+      "legalDate": "01.02.2022",
+      "date": "01.02.2022, 14:22",
+      "modificationDate": "01.02.2022, 14:22",
+      "documentScan": "скан документ",
+      "wayToFile": "путь к документу"
+    },
+    {
+      "id": 3,
+      "insideNumber": 3,
+      "type": "jpg",
+      "name": "Jpeg",
+      "number": 232,
+      "legalDate": "01.02.2022",
+      "date": "01.02.2022, 14:22",
+      "modificationDate": "01.02.2022, 14:22",
+      "documentScan": "скан документ",
+      "wayToFile": "путь к документу"
+    },
+    {
+      "id": 4,
+      "insideNumber": 4,
+      "type": "webm",
+      "name": "Webm",
+      "number": 233,
+      "legalDate": "01.02.2022",
+      "date": "01.02.2022, 14:22",
+      "modificationDate": "01.02.2022, 14:22",
+      "documentScan": "скан документ",
+      "wayToFile": "путь к документу"
+    },
+    {
+      "id": 5,
+      "insideNumber": 5,
+      "type": "mp4",
+      "name": "Mp4",
+      "number": 234,
+      "legalDate": "01.02.2022",
+      "date": "01.02.2022, 14:22",
+      "modificationDate": "01.02.2022, 14:22",
+      "documentScan": "скан документ",
+      "wayToFile": "путь к документу"
+    }
+  ]
+}
+
